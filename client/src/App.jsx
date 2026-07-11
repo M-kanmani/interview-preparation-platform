@@ -11,12 +11,13 @@ import Companies from "./pages/Companies";
 import Bookmarks from "./pages/Bookmarks";
 import Notes from "./pages/Notes";
 import MockTest from "./pages/MockTest";
-import Progress from "./pages/Progress";
+import Progress from "./components/Progress";
 import Resources from "./pages/Resources";
 import Planner from "./pages/Planner";
 import Achievements from "./pages/Achievements";
 import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
+
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
       <Route path="/planner" element={<Planner />} />
       <Route path="/achievements" element={<Achievements />} />
       <Route path="/admin" element={<Admin />} />
+
 
       <Route path="*" element={<NotFound />} />
     </Routes>

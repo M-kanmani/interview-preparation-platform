@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import ThemeToggle from "./ThemeToggle";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,6 +11,7 @@ function Navbar() {
     { name: "Questions", path: "/questions" },
     { name: "Companies", path: "/companies" },
     { name: "Resources", path: "/resources" },
+    {name: "Dashboard", path: "/dashboard"}
   ];
 
   return (
@@ -42,21 +44,25 @@ function Navbar() {
         </div>
 
         {/* Desktop Buttons */}
-        <div className="hidden md:flex gap-3">
-          <Link
-            to="/login"
-            className="px-4 py-2 rounded-lg border border-blue-600 text-blue-600 hover:bg-blue-50"
-          >
-            Login
-          </Link>
+        <div className="hidden md:flex items-center gap-3">
 
-          <Link
-            to="/register"
-            className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700"
-          >
-            Register
-          </Link>
-        </div>
+  <ThemeToggle />
+
+  <Link
+    to="/login"
+    className="px-4 py-2 rounded-lg border border-blue-600 text-blue-600 hover:bg-blue-50"
+  >
+    Login
+  </Link>
+
+  <Link
+    to="/register"
+    className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700"
+  >
+    Register
+  </Link>
+
+</div>
 
         {/* Mobile Menu Button */}
         <button
@@ -82,6 +88,9 @@ function Navbar() {
                 {link.name}
               </NavLink>
             ))}
+            <div className="py-2">
+  <ThemeToggle />
+</div>
 
             <Link
               to="/login"
