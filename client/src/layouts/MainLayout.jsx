@@ -4,21 +4,24 @@ import { useTheme } from "../context/ThemeContext";
 
 function MainLayout({ children }) {
   const { theme } = useTheme();
+  const isDark = theme === "dark";
+
+  const layoutStyle = {
+    minHeight: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    backgroundColor: isDark ? "#0f172a" : "#f8fafc",
+    color: isDark ? "#f8fafc" : "#0f172a",
+    transition: "all 0.3s ease",
+    fontFamily: "'Inter', system-ui, sans-serif",
+  };
 
   return (
-    <div
-      className={`min-h-screen flex flex-col transition-colors duration-300 ${
-        theme === "dark"
-          ? "bg-gray-900 text-white"
-          : "bg-gray-50 text-gray-900"
-      }`}
-    >
+    <div style={layoutStyle}>
       <Navbar />
-
-      <main className="flex-1">
+      <main style={{ flex: 1, width: "100%" }}>
         {children}
       </main>
-
       <Footer />
     </div>
   );

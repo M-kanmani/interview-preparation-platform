@@ -1,18 +1,26 @@
 import { useState } from "react";
 import DashboardLayout from "../layouts/DashboardLayout";
-
 import DashboardHeader from "../components/DashboardHeader";
 import DashboardStats from "../components/DashboardStats";
-import Progress from "../components/Progress";
-import QuickActions from "../components/QuickActions";
 import RecentActivity from "../components/RecentActivity";
 
 function Dashboard() {
   const [search, setSearch] = useState("");
 
+  // Clean layout style object
+  const dashboardStyle = {
+    display: "flex",
+    flexDirection: "column",
+    gap: "40px",          /* Periya gap-kaaga high pixels select seiyapatathu */
+    padding: "30px",       /* Side layout margins padding */
+    backgroundColor: "#f8fafc",
+    minHeight: "100vh"
+  };
+
   return (
     <DashboardLayout>
-      <div className="space-y-8">
+      {/* style attribute moolamaga apply seiyapadugirathu */}
+      <div style={dashboardStyle}>
 
         <DashboardHeader
           search={search}
@@ -20,6 +28,7 @@ function Dashboard() {
         />
 
         <DashboardStats />
+        
         <RecentActivity />
 
       </div>

@@ -1,21 +1,44 @@
 function ProgressBar({ title, percentage }) {
-  return (
-    <div className="bg-white rounded-xl shadow-md p-6">
-      <div className="flex justify-between mb-3">
-        <h3 className="font-semibold text-gray-700">
-          {title}
-        </h3>
+  const cardStyle = {
+    backgroundColor: "#ffffff",
+    borderRadius: "16px",
+    border: "1px solid #e2e8f0",
+    padding: "24px",
+    boxShadow: "0 4px 6px -1px rgba(0,0,0,0.02)",
+    fontFamily: "'Inter', system-ui, sans-serif",
+  };
 
-        <span className="font-bold text-blue-600">
-          {percentage}%
-        </span>
+  const flexHeaderStyle = {
+    display: "flex",
+    justifyContent: "space-between",
+    marginBottom: "12px",
+  };
+
+  const trackStyle = {
+    width: "100%",
+    height: "10px",
+    backgroundColor: "#e2e8f0",
+    borderRadius: "999px",
+    overflow: "hidden",
+  };
+
+  const fillStyle = {
+    height: "100%",
+    backgroundColor: "#2563eb",
+    borderRadius: "999px",
+    width: `${percentage}%`,
+    transition: "width 0.5s ease-in-out",
+  };
+
+  return (
+    <div style={cardStyle}>
+      <div style={flexHeaderStyle}>
+        <h3 style={{ margin: 0, fontSize: "1rem", fontWeight: "600", color: "#475569" }}>{title}</h3>
+        <span style={{ fontWeight: "750", color: "#2563eb" }}>{percentage}%</span>
       </div>
 
-      <div className="w-full h-3 bg-gray-200 rounded-full overflow-hidden">
-        <div
-          className="h-full bg-blue-600 rounded-full transition-all duration-500"
-          style={{ width: `${percentage}%` }}
-        ></div>
+      <div style={trackStyle}>
+        <div style={fillStyle}></div>
       </div>
     </div>
   );

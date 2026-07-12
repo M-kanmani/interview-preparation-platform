@@ -1,28 +1,25 @@
 import { createContext, useContext, useState } from "react";
 
-
 export const ThemeContext = createContext();
 
+export function ThemeProvider({ children }) {
+  // 'light' or 'dark' string type state
+  const [theme, setTheme] = useState("light");
 
-export function ThemeProvider({children}){
-
-  const [darkMode,setDarkMode] = useState(false);
-
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
 
   return (
-    <ThemeContext.Provider 
-      value={{darkMode,setDarkMode}}
-    >
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );
-
 }
 
-
-// custom hook
-export function useTheme(){
-
+// Custom Hook (Ithai direct ah components la use pannikalam)
+export function useTheme() {
   return useContext(ThemeContext);
-
 }
+
+export default ThemeContext;

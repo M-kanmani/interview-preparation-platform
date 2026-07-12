@@ -1,33 +1,25 @@
 import StatCard from "./StatCard";
+import { useTheme } from "../context/ThemeContext";
 
 function DashboardStats() {
-    return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  const { theme } = useTheme();
+  const isDark = theme === "dark";
 
-  <StatCard
-    title="Questions Solved"
-    value="120"
-    color="text-blue-600"
-  />
+  const statsGridStyle = {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+    gap: "20px",
+    width: "100%",
+  };
 
-  <StatCard
-    title="Companies Covered"
-    value="18"
-    color="text-green-600"
-  />
+  return (
+    <div style={statsGridStyle}>
+      <StatCard title="Questions Solved" value="120" color="#3b82f6" isDark={isDark} />
+      <StatCard title="Companies Covered" value="18" color="#22c55e" isDark={isDark} />
+      <StatCard title="Mock Tests" value="9" color="#f97316" isDark={isDark} />
+      <StatCard title="Success Rate" value="82%" color="#a855f7" isDark={isDark} />
+    </div>
+  );
+}
 
-  <StatCard
-    title="Mock Tests"
-    value="9"
-    color="text-orange-500"
-  />
-
-  <StatCard
-    title="Success Rate"
-    value="82%"
-    color="text-purple-600"
-  />
-
-</div>
-    )}
 export default DashboardStats;

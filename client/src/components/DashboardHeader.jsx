@@ -1,26 +1,47 @@
 import SearchBar from "./SearchBar";
-import StatCard from "./StatCard";
-import ProgressBar from "./ProgressBar";
+
 function DashboardHeader({ search, setSearch }) {
+  // Styles
+  const headerContainerStyle = {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    flexWrap: "wrap",
+    gap: "16px",
+    width: "100%",
+    fontFamily: "'Inter', system-ui, sans-serif",
+  };
+
+  const titleStyle = {
+    fontSize: "1.85rem",
+    fontWeight: "800",
+    color: "#0f172a",
+    margin: 0,
+    letterSpacing: "-0.5px",
+  };
+
+  const subtitleStyle = {
+    color: "#64748b",
+    fontSize: "0.95rem",
+    marginTop: "6px",
+    marginBottom: 0,
+  };
+
   return (
-    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+    <div style={headerContainerStyle}>
+      <div>
+        <h1 style={titleStyle}>Dashboard</h1>
+        <p style={subtitleStyle}>Track your interview preparation progress.</p>
+      </div>
 
-  <div>
-    <h1 className="text-3xl font-bold text-gray-800">
-      Dashboard
-    </h1>
+      <SearchBar
+        placeholder="Search questions..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+    </div>
+  );
+}
 
-    <p className="text-gray-500 mt-2">
-      Track your interview preparation progress.
-    </p>
-  </div>
-
-  <SearchBar
-    placeholder="Search questions..."
-    value={search}
-    onChange={(e) => setSearch(e.target.value)}
-  />
-
-</div>
-)}
 export default DashboardHeader;

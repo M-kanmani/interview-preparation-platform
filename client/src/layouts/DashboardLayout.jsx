@@ -5,20 +5,37 @@ import { useTheme } from "../context/ThemeContext";
 function DashboardLayout({ children }) {
   const { theme } = useTheme();
 
+  // Flexbox container properties for Sidebar alongside Main panel
+  const layoutStyle = {
+    display: "flex",
+    flexDirection: "column",
+    minHeight: "100vh",
+    backgroundColor: theme === "dark" ? "#0f172a" : "#f8fafc",
+    color: theme === "dark" ? "#ffffff" : "#0f172a",
+    transition: "background-color 0.3s ease",
+    fontFamily: "'Inter', system-ui, sans-serif",
+  };
+
+  const mainWrapperStyle = {
+    display: "flex",
+    flex: 1,
+  };
+
+  const contentStyle = {
+    flex: 1,
+    padding: "32px",
+    boxSizing: "border-box",
+    overflowY: "auto",
+  };
+
   return (
-    <div
-      className={`min-h-screen transition-colors duration-300 ${
-        theme === "dark"
-          ? "bg-gray-900 text-white"
-          : "bg-gray-100 text-gray-900"
-      }`}
-    >
+    <div style={layoutStyle}>
       <Navbar />
 
-      <div className="flex">
+      <div style={mainWrapperStyle}>
         <Sidebar />
 
-        <main className="flex-1 p-6 overflow-auto">
+        <main style={contentStyle}>
           {children}
         </main>
       </div>

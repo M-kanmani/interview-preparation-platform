@@ -48,19 +48,7 @@ function Navbar() {
 
   <ThemeToggle />
 
-  <Link
-    to="/login"
-    className="px-4 py-2 rounded-lg border border-blue-600 text-blue-600 hover:bg-blue-50"
-  >
-    Login
-  </Link>
 
-  <Link
-    to="/register"
-    className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700"
-  >
-    Register
-  </Link>
 
 </div>
 
