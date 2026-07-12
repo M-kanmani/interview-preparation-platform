@@ -1,15 +1,16 @@
 import { NavLink } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
-import { FaHome, FaQuestionCircle, FaBookmark, FaStickyNote, FaChartLine, FaUser } from "react-icons/fa";
+import { FaHome, FaQuestionCircle, FaBookmark, FaStickyNote, FaChartLine, FaUser, FaFileMedicalAlt } from "react-icons/fa";
 
 function Sidebar() {
   const { theme } = useTheme();
-  
+
   const menuItems = [
     { name: "Dashboard", path: "/dashboard", icon: <FaHome /> },
     { name: "Questions", path: "/questions", icon: <FaQuestionCircle /> },
     { name: "Bookmarks", path: "/bookmarks", icon: <FaBookmark /> },
     { name: "Notes", path: "/notes", icon: <FaStickyNote /> },
+    { name: "Mock Test", path: "/mock-test", icon: <FaFileMedicalAlt /> },
     { name: "Progress", path: "/progress", icon: <FaChartLine /> },
     { name: "Profile", path: "/profile", icon: <FaUser /> },
   ];
@@ -17,7 +18,7 @@ function Sidebar() {
 
   const sidebarStyle = {
     width: "260px",
-    backgroundColor: theme === "dark" ? "#1e293b" : "#ffffff", 
+    backgroundColor: theme === "dark" ? "#1e293b" : "#ffffff",
     borderRight: theme === "dark" ? "1px solid #334155" : "1px solid #e2e8f0",
     minHeight: "100vh",
     padding: "24px 16px",
@@ -54,7 +55,6 @@ function Sidebar() {
               fontWeight: "600",
               fontSize: "0.95rem",
               backgroundColor: isActive ? "#2563eb" : "transparent",
-              // ஆக்டிவ் இல்லாத டெக்ஸ்ட் கலர் டார்க் மோடுக்கு ஏத்த மாதிரி மாறும்
               color: isActive ? "#ffffff" : (theme === "dark" ? "#94a3b8" : "#475569"),
               transition: "all 0.2s",
             })}

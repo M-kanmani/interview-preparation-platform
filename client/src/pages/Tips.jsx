@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 import "./Pages.css";
 
 function Tips() {
-      const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <div className="tips-page">
 
@@ -100,9 +100,6 @@ function Tips() {
         </div>
 
       </section>
-
-
-
       {/* ================= STAY CALM SECTION ================= */}
 
 
@@ -136,12 +133,7 @@ function Tips() {
 
 
         </div>
-
-
-
         <div className="calm-cards">
-
-
           <div className="calm-card">
 
             <FaBookOpen />
@@ -155,9 +147,6 @@ function Tips() {
             </p>
 
           </div>
-
-
-
           <div className="calm-card">
 
             <FaClock />
@@ -169,9 +158,6 @@ function Tips() {
             </p>
 
           </div>
-
-
-
           <div className="calm-card">
 
             <FaLeaf />
@@ -185,9 +171,6 @@ function Tips() {
             </p>
 
           </div>
-
-
-
           <div className="calm-card">
 
             <FaTrophy />
@@ -201,49 +184,29 @@ function Tips() {
             </p>
 
           </div>
-
-
         </div>
-
-
       </section>
-            {/* ================= INTERVIEWERS SECTION ================= */}
+      {/* ================= INTERVIEWERS SECTION ================= */}
 
       <section className="interviewers-section">
-
-
         <div className="section-heading purple">
-
-
           <div className="section-icon">
             <FaUser />
           </div>
-
-
           <div>
 
             <h2>
               Know Your Interviewers
             </h2>
-
-
             <p>
               If you know who your interviewers are, you can tailor your
               answers to their background and expectations.
               <br />
               This increases your chances of making a lasting impression.
             </p>
-
           </div>
-
-
         </div>
-
-
-
         <div className="interviewer-cards">
-
-
           <div className="interviewer-card">
 
             <FaUser />
@@ -262,10 +225,6 @@ function Tips() {
             </div>
 
           </div>
-
-
-
-
           <div className="interviewer-card">
 
             <FaComments />
@@ -284,10 +243,6 @@ function Tips() {
             </div>
 
           </div>
-
-
-
-
           <div className="interviewer-card">
 
             <FaSmile />
@@ -302,233 +257,110 @@ function Tips() {
                 Ask meaningful questions to show your interest and
                 enthusiasm.
               </p>
-
             </div>
-
           </div>
-
-
         </div>
-
-
       </section>
-
-
-
-
       {/* ================= STATISTICS SECTION ================= */}
-
-
       <section className="statistics-section">
-
-
         <div className="stat-card">
-
           <h1>
             67%
           </h1>
-
           <p>
             Of all job interviews turn out more positively when the
             candidate maintains eye contact with the interviewers.
           </p>
-
         </div>
-
-
-
         <div className="stat-card">
-
           <h1>
             71%
           </h1>
-
           <p>
             Of all employers reject candidates who do not dress
             appropriately for their job interview.
           </p>
-
         </div>
-
-
-
         <div className="stat-card">
-
           <h1>
             91%
           </h1>
-
           <p>
             Of all employers strongly prefer candidates with
             relevant work experience.
           </p>
-
         </div>
-
-
       </section>
-
-
-
-
-
       {/* ================= DO'S AND DON'TS SECTION ================= */}
-
-
       <section className="dos-donts-section">
-
-
-
         <div className="dos-box">
-
-
           <h2>
             ✔ Do's
           </h2>
-
-
           <ul>
-
             <li>
               <b>Show your enthusiasm</b>
               <br />
               Show interest in the role and company.
             </li>
-
-
             <li>
               <b>Articulate your value</b>
               <br />
               Clearly explain what you bring to the table.
             </li>
-
-
             <li>
               <b>Show your initiative</b>
               <br />
               Highlight your problem-solving skills.
             </li>
-
-
             <li>
               <b>Ask questions</b>
               <br />
               Show your interest towards the company.
             </li>
-
-
           </ul>
-
-
         </div>
-
-
-
-
-
         <div className="donts-box">
-
-
           <h2>
             ✖ Don'ts
           </h2>
-
-
           <ul>
-
-
             <li>
-
               <b>Don't be late</b>
-
               <br />
-
               Arrive 10-15 minutes early.
-
             </li>
-
-
-
             <li>
-
               <b>Don't lie or exaggerate</b>
-
               <br />
-
               Be honest about your skills.
-
             </li>
-
-
-
             <li>
-
               <b>Don't forget to listen</b>
-
               <br />
-
               Understand questions before answering.
-
             </li>
-
-
-
             <li>
-
               <b>Don't be too confident</b>
-
               <br />
-
               Maintain a professional attitude.
-
             </li>
-
-
           </ul>
-
-
         </div>
-
-
       </section>
-
-
-
-
-
-
       {/* ================= BOTTOM CTA ================= */}
-
-
-
       <section className="bottom-cta">
-
-
         <h2>
           Perfectly Prepare Yourself for Your Next Job Interview?
         </h2>
-
-
         <p>
           Let's get started and make your job interview a great success!
         </p>
-
-
-
         <button onClick={() => navigate("/dashboard")}>
-  🚀 Go to Dashboard
-</button>
-
-
-
+          🚀 Go to Dashboard
+        </button>
       </section>
-
-
-
-
     </div>
   );
 }
-
-
 export default Tips;

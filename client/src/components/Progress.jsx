@@ -18,7 +18,7 @@ function Progress() {
   return (
     <div style={containerStyle}>
       <h1 style={{ fontSize: "2.25rem", fontWeight: "800", color: "#0f172a", margin: 0 }}>Progress Overview</h1>
-      
+
       <div style={gridStyle}>
         <ProgressBar title="DSA Progress" percentage={75} />
         <ProgressBar title="Aptitude Progress" percentage={60} />

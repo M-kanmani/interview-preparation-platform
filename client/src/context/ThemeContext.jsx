@@ -17,7 +17,6 @@ export function ThemeProvider({ children }) {
   );
 }
 
-// Custom Hook (Ithai direct ah components la use pannikalam)
 export function useTheme() {
   return useContext(ThemeContext);
 }

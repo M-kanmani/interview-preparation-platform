@@ -1,6 +1,4 @@
-import SearchBar from "./SearchBar";
-
-function DashboardHeader({ search, setSearch }) {
+function DashboardHeader() {
   // Styles
   const headerContainerStyle = {
     display: "flex",
@@ -35,11 +33,7 @@ function DashboardHeader({ search, setSearch }) {
         <p style={subtitleStyle}>Track your interview preparation progress.</p>
       </div>
 
-      <SearchBar
-        placeholder="Search questions..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
+
     </div>
   );
 }

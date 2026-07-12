@@ -54,7 +54,7 @@ function Home() {
   return (
     <MainLayout>
       <section style={sectionStyle}>
-        
+
         <h1 style={titleStyle}>
           Welcome to Interview Preparation Platform
         </h1>
@@ -66,10 +66,10 @@ function Home() {
         <div style={btnContainerStyle}>
           <Link
             to="/login"
-            style={{ 
-              ...baseBtnStyle, 
-              backgroundColor: "#2563eb", 
-              color: "#ffffff" 
+            style={{
+              ...baseBtnStyle,
+              backgroundColor: "#2563eb",
+              color: "#ffffff"
             }}
             onMouseEnter={(e) => {
               e.target.style.backgroundColor = "#1d4ed8";
@@ -85,9 +85,9 @@ function Home() {
 
           <Link
             to="/register"
-            style={{ 
-              ...baseBtnStyle, 
-              backgroundColor: "#ffffff", 
+            style={{
+              ...baseBtnStyle,
+              backgroundColor: "#ffffff",
               color: "#0f172a",
               border: "1px solid #e2e8f0"
             }}
