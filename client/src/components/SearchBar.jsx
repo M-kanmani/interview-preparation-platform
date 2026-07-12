@@ -6,7 +6,7 @@ function SearchBar({ placeholder = "Search...", value = "", onChange }) {
   const { theme } = useTheme();
   const isDark = theme === "dark";
   
-  // Focus ஸ்டேட்டைக் கண்காணிக்க ஒரு புதிய ஸ்டேட்
+ 
   const [isFocused, setIsFocused] = useState(false);
 
   // --- Theme-based Dynamic Values ---

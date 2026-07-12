@@ -8,6 +8,48 @@ function Bookmark() {
       question: "What is useEffect?",
       answer: "useEffect handles side effects in React.",
     },
+    {
+      title: "JavaScript Closures",
+      difficulty: "Hard",
+      question: "What is a closure?",
+      answer: "A closure is a function that has access to its outer function's scope even after the outer function has returned.",    
+    },
+    {
+      title: "CSS Flexbox",
+      difficulty: "Easy",
+      question: "What is Flexbox?",
+      answer: "Flexbox is a CSS layout model that allows you to design complex layouts easily and efficiently.",
+    },
+    {
+      title: "Node.js Event Loop",
+      difficulty: "Medium",
+      question: "How does the Node.js event loop work?",
+      answer: "The event loop is a mechanism that allows Node.js to perform non-blocking I/O operations by offloading operations to the system kernel whenever possible.",  
+    },
+    {
+      title: "Python Generators",
+      difficulty: "Medium",
+      question: "What is a generator in Python?",
+      answer: "A generator is a function that returns an iterator and allows you to iterate over a sequence of values using the yield statement.",
+    },
+    {
+      title: "SQL Joins",
+      difficulty: "Hard",
+      question: "What are SQL joins?",
+      answer: "SQL joins are used to combine rows from two or more tables based on a related column between them.",
+    }, 
+    {
+      title: "TypeScript Interfaces",
+      difficulty: "Medium",
+      question: "What is an interface in TypeScript?",
+      answer: "An interface in TypeScript is a way to define the shape of an object, specifying the properties and their types that an object must have.",
+    }, 
+    {
+      title: "GraphQL Queries",
+      difficulty: "Hard",
+      question: "What is a GraphQL query?",
+      answer: "A GraphQL query is a request for data from a GraphQL server, allowing clients to specify exactly what data they need.",
+    }
   ];
 
   const [open, setOpen] = useState(null);

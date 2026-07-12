@@ -3,6 +3,11 @@ function MockTest() {
     { title: "Frontend Developer Test", questions: 30, time: "30 min" },
     { title: "MERN Stack Test", questions: 50, time: "45 min" },
     { title: "JavaScript Test", questions: 25, time: "20 min" },
+    { title: "React Test", questions: 20, time: "15 min" },
+    { title: "Node.js Test", questions: 30, time: "25 min" },
+    { title: "Python Test", questions: 40, time: "30 min" },
+    { title: "Java Test", questions: 35, time: "30 min" },
+    { title: "C++ Test", questions: 30, time: "25 min" },
   ];
 
   const containerStyle = {
