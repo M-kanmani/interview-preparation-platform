@@ -9,17 +9,13 @@ import Tips from "./pages/Tips";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
 import Questions from "./pages/Questions";
-import QuestionDetails from "./pages/QuestionDetails";
+
 import Companies from "./pages/Companies";
 import Bookmarks from "./pages/Bookmarks";
 import Notes from "./pages/Notes";
 import MockTest from "./pages/MockTest";
 import Progress from "./components/Progress";
 import Resources from "./pages/Resources";
-import Planner from "./pages/Planner";
-import Achievements from "./pages/Achievements";
-import Admin from "./pages/Admin";
-import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -45,18 +41,12 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/questions" element={<Questions />} />
-        <Route path="/questions/:id" element={<QuestionDetails />} />
         <Route path="/companies" element={<Companies />} />
         <Route path="/bookmarks" element={<Bookmarks />} />
         <Route path="/notes" element={<Notes />} />
         <Route path="/mock-test" element={<MockTest />} />
         <Route path="/progress" element={<Progress />} />
         <Route path="/resources" element={<Resources />} />
-        <Route path="/planner" element={<Planner />} />
-        <Route path="/achievements" element={<Achievements />} />
-        <Route path="/admin" element={<Admin />} />
-
-        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
