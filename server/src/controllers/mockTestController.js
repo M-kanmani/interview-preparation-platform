@@ -35,3 +35,26 @@ export const getMockTests = async (req, res) => {
     });
   }
 };
+// Get Single Mock Test
+export const getMockTestById = async (req, res) => {
+  try {
+    const test = await MockTest.findById(req.params.id);
+
+    if (!test) {
+      return res.status(404).json({
+        success: false,
+        message: "Mock Test Not Found",
+      });
+    }
+
+    res.status(200).json({
+      success: true,
+      data: test,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};

@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -11,6 +12,7 @@ import Companies from "./pages/Companies";
 import Bookmarks from "./pages/Bookmarks";
 import Notes from "./pages/Notes";
 import MockTest from "./pages/MockTest";
+import StartTest from "./pages/StartTest"; // ✅ Added
 import Progress from "./pages/Progress";
 import Resources from "./pages/Resources";
 import Planner from "./pages/Planner";
@@ -25,10 +27,22 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
 
-      <Route path="/dashboard" element={<Dashboard />} />
+      <Route
+        path="/dashboard"
+        element={
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        }
+      />
+
       <Route path="/profile" element={<Profile />} />
       <Route path="/questions" element={<Questions />} />
       <Route path="/questions/:id" element={<QuestionDetails />} />
+
+      {/* ✅ New Route */}
+      <Route path="/start-test/:id" element={<StartTest />} />
+
       <Route path="/companies" element={<Companies />} />
       <Route path="/bookmarks" element={<Bookmarks />} />
       <Route path="/notes" element={<Notes />} />

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { loginUser } from "../services/authService";
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -13,9 +14,31 @@ function Login() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+
+    try {
+      const data = await loginUser(formData);
+
+      console.log("Login Success:", data);
+
+      // Save token
+      localStorage.setItem("token", data.token);
+
+      // Save user
+      localStorage.setItem("user", JSON.stringify(data.user));
+
+      alert("Login Successful!");
+
+      window.location.href = "/dashboard";
+    } catch (error) {
+      console.error(
+        "Login Failed:",
+        error.response?.data || error.message
+      );
+
+      alert("Login Failed");
+    }
   };
 
   return (

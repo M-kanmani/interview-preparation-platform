@@ -10,14 +10,6 @@ import {
 
 const router = express.Router();
 
-router.get("/", getNotes);
-
-router.post("/", addNote);
-
-router.put("/:id", updateNote);
-
-router.delete("/:id", deleteNote);
-
 router.get("/", authMiddleware, getNotes);
 
 router.post("/", authMiddleware, addNote);
