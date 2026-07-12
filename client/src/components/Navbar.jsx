@@ -11,7 +11,7 @@ function Navbar() {
     { name: "Questions", path: "/questions" },
     { name: "Companies", path: "/companies" },
     { name: "Resources", path: "/resources" },
-    {name: "Dashboard", path: "/dashboard"}
+    { name: "Dashboard", path: "/dashboard" }
   ];
 
   return (
@@ -46,11 +46,11 @@ function Navbar() {
         {/* Desktop Buttons */}
         <div className="hidden md:flex items-center gap-3">
 
-  <ThemeToggle />
+          <ThemeToggle />
 
 
 
-</div>
+        </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -77,8 +77,8 @@ function Navbar() {
               </NavLink>
             ))}
             <div className="py-2">
-  <ThemeToggle />
-</div>
+              <ThemeToggle />
+            </div>
 
             <Link
               to="/login"

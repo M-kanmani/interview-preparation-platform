@@ -175,7 +175,7 @@ function Companies() {
                 {company.role}
               </span>
             </div>
-            
+
             <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "#0f172a", marginBottom: "20px" }}>
               {company.name} Interview Questions
             </h2>

@@ -5,11 +5,13 @@ function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
   const [isHovered, setIsHovered] = useState(false);
 
+  const isDark = theme === "dark";
+
   // --- Premium Toggle Button Styles ---
   const toggleBtnStyle = {
-    backgroundColor: theme === "dark" ? "#1e293b" : "#f1f5f9",
-    color: theme === "dark" ? "#f8fafc" : "#0f172a",
-    border: theme === "dark" ? "1px solid #334155" : "1px solid #e2e8f0",
+    backgroundColor: isDark ? "#1e293b" : "#f1f5f9",
+    color: isDark ? "#f8fafc" : "#0f172a",
+    border: isDark ? "1px solid #334155" : "1px solid #e2e8f0",
     padding: "8px 16px",
     borderRadius: "20px",
     cursor: "pointer",
@@ -29,7 +31,7 @@ function ThemeToggle() {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {theme === "dark" ? "☀️ Light Mode" : "🌙 Dark Mode"}
+      {isDark ? "☀️ Light Mode" : "🌙 Dark Mode"}
     </button>
   );
 }
